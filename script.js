@@ -4,11 +4,11 @@ function minDate(dates) {
    const dateObjects= dates.map((date)=>new Date(date));
    //this uses dates in string format to convert into exact dates 
    //op of dateObjects is elobrated form of date
-   console.log(dateObjects)
+   //console.log(dateObjects)
 
    const MinDatesObject= new Date(Math.min(...dateObjects));
    //return the nearest date i.e the minimum date 
-   console.log(MinDatesObject)
+   //console.log(MinDatesObject)
 
    //formating the date back to required format
    const year = MinDatesObject.getFullYear(); //console.log(year) 2023
