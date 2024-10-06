@@ -1,5 +1,21 @@
 function minDate(dates) {
   //write you code here
+	function minDate(dates) {
+   const dateObjects= dates.map((date)=>new Date(date));
+   //this uses dates in string format to convert into exact dates 
+   //op of dateObjects is elobrated form of date
+   console.log(dateObjects)
+
+   const MinDatesObject= new Date(Math.min(...dateObjects));
+   //return the nearest date i.e the minimum date 
+   console.log(MinDatesObject)
+
+   //formating the date back to required format
+   const year = MinDatesObject.getFullYear(); //console.log(year) 2023
+   const Month = String(MinDatesObject.getMonth()+1).padStart(2,'0');// console.log(Month) 03
+   const date = String(MinDatesObject.getDate()).padStart(2,'0'); //console.log(date) 01
+	return `${year}/${Month}/${date}`
+}
 }
 
 // Do not change the code
